@@ -6,9 +6,12 @@ name: Workflow 3
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
+    branches: [ "main" ]  # Technically, this may not be necessary with GitHub Flow
+    paths-ignore: '.github/workflows/**'
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main" ]  # Technically, this may not be necessary with GitHub Flow
+    paths-ignore:
+      - '.github/workflows/**'
 
   workflow_dispatch: # manual
 
