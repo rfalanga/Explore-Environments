@@ -5,13 +5,13 @@ name: Workflow 2
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]  # Technically, this may not be necessary with GitHub Flow
-    paths-ignore: '.github/workflows/**'
-  pull_request:
-    branches: [ "main" ]  # Technically, this may not be necessary with GitHub Flow
-    paths-ignore:
-      - '.github/workflows/**'
+  release:
+    # branches: [ "main" ]  # Technically, this may not be necessary with GitHub Flow
+    # paths-ignore: '.github/workflows/**'
+  # pull_request:
+  #   branches: [ "main" ]  # Technically, this may not be necessary with GitHub Flow
+  #   paths-ignore:               # This didn't want to work, so I commented it out.
+  #     - '.github/workflows/**'  # This didn't want to work, so I commented it out.
 
   workflow_dispatch: # manual
 
