@@ -15,3 +15,7 @@ I've removed the code related to pull requests from the workflow-1.yml file.
 The logic in the Workflow file for this environment, is esoteric.
 
 OK, now I've created a child branch to `main`.
+
+## Testing VS Code
+
+Since my Windows Profile was deleted earlier today, I am testing if VS Code will work and how it will work now.
