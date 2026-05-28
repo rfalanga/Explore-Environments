@@ -18,4 +18,4 @@ OK, now I've created a child branch to `main`.
 
 ## Testing VS Code
 
-Since my Windows Profile was deleted earlier today, I am testing if VS Code will work and how it will work now...
+Since my Windows Profile was deleted earlier today, I am testing if VS Code will work and how it will work now.
