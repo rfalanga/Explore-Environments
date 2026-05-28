@@ -5,9 +5,6 @@ name: Workflow 1 (for development environment)
 
 # Controls when the workflow will run
 on:
-  # push:
-  #   branches: [ "main" ]  # Technically, this may not be necessary with GitHub Flow
-  #   paths-ignore: '.github/workflows/**'
   pull_request:
     branches: [ "main" ]  # This works for GitHub Flow.
     paths-ignore:

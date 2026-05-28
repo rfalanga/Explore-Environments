@@ -4,9 +4,6 @@ name: Workflow 2 (for the staging environment)
 
 # Controls when the workflow will run
 on:
-  # release:
-    # branches: [ "main" ]  # Technically, this may not be necessary with GitHub Flow
-    # paths-ignore: '.github/workflows/**'
   pull_request:
     branches: [ "main" ]  # Technically, this may not be necessary with GitHub Flow
     paths-ignore:               # This didn't want to work, so I commented it out.

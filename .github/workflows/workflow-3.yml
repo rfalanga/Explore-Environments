@@ -4,7 +4,6 @@ name: Workflow 3 (for the production environment)
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
   pull_request:
     branches: [ "main" ]  # Technically, this may be all that's necessary with GitHub Flow
     paths-ignore:
