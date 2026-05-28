@@ -1,7 +1,7 @@
 # This is a basic workflow to help you get started with Actions
 # This is for the development environment and should only run this workflow
 
-name: Workflow 1
+name: Workflow 1 (for development environment)
 
 # Controls when the workflow will run
 on:
