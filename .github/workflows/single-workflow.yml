@@ -6,7 +6,7 @@ name: Single Workflow (for all 3 environments)
 
 # Controls when the workflow will run
 on:
-  pull_request:
+  push: # This used to be pull_request 
     branches: [ "main" ]  # Technically, this may be all that's necessary with GitHub Flow
     paths-ignore:
       - '.github/workflows/**'
@@ -17,6 +17,7 @@ on:
 jobs:
 
   development-deploy:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment: development
       
@@ -30,6 +31,7 @@ jobs:
         run: echo ${{ vars.DISPLAY_TEXT }}
 
   staging-deploy:
+    if: github.event_name == 'release'
     runs-on: ubuntu-latest
     environment: staging
       
@@ -43,6 +45,7 @@ jobs:
         run: echo ${{ vars.DISPLAY_TEXT }}
 
   production-deploy:
+    needs: staging-deploy
     runs-on: ubuntu-latest
     environment: production
       
