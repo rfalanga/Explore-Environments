@@ -1,1 +1,27 @@
 # This YAML is for the production environment, and is based on the single-workflow.yml file.
+
+name: Single Workflow Release (for production environment)
+
+# Controls when the workflow will run
+on:
+  push: # This used to be pull_request 
+    branches: [ "main" ]  # Technically, this may be all that's necessary with GitHub Flow
+    paths-ignore:
+      - '.github/workflows/**'
+
+  workflow_dispatch: # manual
+
+jobs:
+    production-deploy:
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        runs-on: ubuntu-latest
+        environment: production
+        
+        # Steps represent a sequence of tasks that will be executed as part of the job
+        steps:
+        # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+        - uses: actions/checkout@v6
+    
+        # Runs a single command using the runners shell
+        - name: Print value from ENVIRONMENT
+          run: echo ${{ vars.DISPLAY_TEXT }}
