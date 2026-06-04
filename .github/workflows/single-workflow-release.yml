@@ -4,16 +4,16 @@ name: Single Workflow Release (for production environment)
 
 # Controls when the workflow will run
 on:
-  push: # This used to be pull_request 
-    branches: [ "main" ]  # Technically, this may be all that's necessary with GitHub Flow
-    paths-ignore:
-      - '.github/workflows/**'
+  release:  
+    # branches: [ "main" ]  # Technically, this may be all that's necessary with GitHub Flow
+    # paths-ignore:
+    #   - '.github/workflows/**'
 
   workflow_dispatch: # manual
 
 jobs:
     production-deploy:
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        if: github.event_name == 'release'
         runs-on: ubuntu-latest
         environment: production
         
