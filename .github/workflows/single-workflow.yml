@@ -44,16 +44,16 @@ jobs:
       - name: Print value from ENVIRONMENT
         run: echo ${{ vars.DISPLAY_TEXT }}
 
-  production-deploy:
-    needs: staging-deploy
-    runs-on: ubuntu-latest
-    environment: production
+  # production-deploy:
+  #   needs: staging-deploy
+  #   runs-on: ubuntu-latest
+  #   environment: production
       
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v6
+  #   # Steps represent a sequence of tasks that will be executed as part of the job
+  #   steps:
+  #     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+  #     - uses: actions/checkout@v6
 
-      # Runs a single command using the runners shell
-      - name: Print value from ENVIRONMENT
-        run: echo ${{ vars.DISPLAY_TEXT }}
+  #     # Runs a single command using the runners shell
+  #     - name: Print value from ENVIRONMENT
+  #       run: echo ${{ vars.DISPLAY_TEXT }}
