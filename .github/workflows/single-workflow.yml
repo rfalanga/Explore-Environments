@@ -2,7 +2,7 @@
 # I am going to modify this workflow (which I created by copying the workflow-3.yml file) to be for the production environment,
 # to follow the pattern described in the link above.
 
-name: Single Workflow (for all 3 environments)
+name: Single Workflow (for development and staging environments)
 
 # Controls when the workflow will run
 on:
